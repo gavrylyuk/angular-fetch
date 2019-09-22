@@ -7,6 +7,7 @@ import { FormModule } from './components/form/form.module';
 import { ButtonModule } from './components/button/button.module';
 import { InputModule } from './components/input/input.module';
 import { TooltipModule } from './components/tooltip/tooltip.module';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { TooltipModule } from './components/tooltip/tooltip.module';
     ButtonModule,
     TooltipModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
