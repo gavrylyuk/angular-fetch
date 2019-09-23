@@ -8,10 +8,6 @@ button {
     cursor: pointer;
 }
   
-button:hover {
+button:active {
     background-color: rgb(55, 113, 128);
-}
-
-button:focus {
-    outline:0;
 }

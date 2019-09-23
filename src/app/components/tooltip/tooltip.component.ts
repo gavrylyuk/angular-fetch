@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Item } from 'src/app/services/api.interface';
 import { ApiService } from 'src/app/services/api.service';
-
 
 @Component({
   selector: 'app-tooltip',
@@ -10,15 +9,18 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class TooltipComponent implements OnInit {
 
+  @Input() renderTooltip: boolean
+  
   items: Item[]
 
-  constructor(
-    private apiServise: ApiService
+  constructor(    
+    private apiServise: ApiService 
   ) { }
 
-  ngOnInit() {
+  ngOnInit() { 
     this.apiServise.getItems().subscribe(
       (data) => this.items = data
-    );
+    )
   }
+
 }

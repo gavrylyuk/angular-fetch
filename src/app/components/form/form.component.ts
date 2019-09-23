@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  renderTooltip: boolean = false
 
-  ngOnInit() {
+  constructor( ) { }
+
+  ngOnInit() { }
+
+  handleOpenTooltip(): void {
+    this.renderTooltip = !this.renderTooltip
   }
-
 }
